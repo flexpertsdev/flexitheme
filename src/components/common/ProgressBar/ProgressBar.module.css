@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.track {
+  width: 100%;
+  background-color: var(--color-gray-200);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.track.sm {
+  height: 4px;
+}
+
+.track.md {
+  height: 8px;
+}
+
+.track.lg {
+  height: 12px;
+}
+
+.bar {
+  height: 100%;
+  transition: width 300ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+.bar.default {
+  background-color: var(--color-primary-600);
+}
+
+.bar.success {
+  background-color: var(--color-success-600);
+}
+
+.bar.warning {
+  background-color: var(--color-warning-600);
+}
+
+.bar.error {
+  background-color: var(--color-error-600);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

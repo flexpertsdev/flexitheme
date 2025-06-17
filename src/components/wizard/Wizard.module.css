@@ -1,0 +1,21 @@
+.wizard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wizardHeader {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-lg) 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wizardContent {
+  flex: 1;
+  background: var(--color-gray-50);
+  padding: var(--space-xl) var(--space-md);
+}
